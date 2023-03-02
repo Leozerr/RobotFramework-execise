@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.1 on darwin)" generated="20230302 21:55:38.061" rpa="false" schemaversion="3">
+<suite id="s1" name="Add to cart" source="/Users/patchanon/Documents/GitHub/Robot/Add_to_cart.robot">
+<test id="s1-t1" name="TC_Add_To_Cart_Success" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230302 21:55:38.225" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230302 21:55:38.224" endtime="20230302 21:55:40.629"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${validate_user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 21:55:40.632" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20230302 21:55:40.630" endtime="20230302 21:55:40.807"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 21:55:40.808" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230302 21:55:40.807" endtime="20230302 21:55:40.897"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230302 21:55:40.899" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20230302 21:55:40.898" endtime="20230302 21:55:41.021"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Sauce Labs Backpack</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230302 21:55:41.021" endtime="20230302 21:55:41.038"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230302 21:55:41.039" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230302 21:55:41.038" endtime="20230302 21:55:41.085"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=shopping_cart_container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230302 21:55:41.086" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
+<status status="PASS" starttime="20230302 21:55:41.085" endtime="20230302 21:55:41.122"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Sauce Labs Backpack</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230302 21:55:41.122" endtime="20230302 21:55:41.128"/>
+</kw>
+<status status="PASS" starttime="20230302 21:55:38.224" endtime="20230302 21:55:41.128"/>
+</test>
+<status status="PASS" starttime="20230302 21:55:38.065" endtime="20230302 21:55:41.129"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Add to cart">Add to cart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
